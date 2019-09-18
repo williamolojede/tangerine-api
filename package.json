@@ -1,0 +1,27 @@
+{
+  "name": "tangerine-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "start:dev": "babel-watch src/server.js",
+    "prebuild": "rimraf dist",
+    "build": "babel src -d dist --source-maps --ignore ./node_modules",
+    "heroku-postbuild": "yarn build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-watch": "^7.0.0"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "airtable": "^0.7.1",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1"
+  }
+}
